@@ -2029,8 +2029,9 @@ input, select, textarea {
 			font-weight: 400;
 		}
 
-		.icon > .label {
-			display: none;
+		.icon.label {
+			display: block ;
+			transform: rotate(45deg);
 		}
 
 		.icon:before {
@@ -2054,40 +2055,71 @@ input, select, textarea {
 			border: solid 2px #fff;
 			display: inline-block;
 			font-size: 1.35em;
-			height: calc(3em + 2px);
-			line-height: 3em;
+			height: calc(2em + 2px); 
+			line-height: 2em; 
 			text-align: center;
-			width: calc(3em + 2px);
+			width: calc(2em + 2px); 
 		}
 
-			.icon.major:before {
-				-moz-transform: rotate(45deg);
-				-webkit-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
-				transform: rotate(45deg);
-				display: inline-block;
-				font-size: 1.5em;
+		.icon.major:before {
+			-moz-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+			display: inline-block;
+			font-size: 1.5em;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.icon.major {
+				font-size: 1em;
 			}
-
-			@media screen and (max-width: 736px) {
-
-				.icon.major {
-					font-size: 1em;
-				}
-
-			}
-
-		.icon.style1 {
-			color: #00ffcc;
 		}
+		
+/* Project icon */
 
-		.icon.style2 {
-			color: #00f0ff;
-		}
+.image-container {
+	text-decoration: none;
+	border-bottom: none;
+	display: inline-block; /* Ensure the container fits the content */
+	text-align: center; /* Center the label text */
+	align-items: start;
+}
 
-		.icon.style3 {
-			color: #76ddff;
-		}
+.image-container:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 5;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400;
+}
+
+.rotated-image {
+	display: block;
+    margin: 0 auto;
+	transform: rotate(45deg); /* Rotate the image by 45 degrees */
+}
+
+.image-container.brands:before {
+	font-family: 'Font Awesome 5 Brands';
+}
+
+.image-container.solid:before {
+	font-weight: 900;
+}
+
+.image-container.label {
+    display: block;
+    margin-top: 2em; /* Space between image and label */
+    text-align: center; /* Center the label under the image */
+    font-size: 1em; /* Adjust as needed */
+}
 
 /* Image */
 
@@ -2314,11 +2346,12 @@ input, select, textarea {
 			}
 
 		ul.icons.major {
-			padding: 1em 0;
+			display: inline-flex;
+			align-items: flex-start;			
 		}
 
 			ul.icons.major li {
-				padding-right: 3.5em;
+				padding-right: 2em;
 			}
 
 				@media screen and (max-width: 736px) {
