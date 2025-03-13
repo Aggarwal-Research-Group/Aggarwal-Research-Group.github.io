@@ -1,3 +1,14 @@
+--
+Notes by Elmar:
+
+This template was modified to run with Jekyll
+See: https://jekyllrb.com/docs/installation/ for lokal installation and webside hosting (recomended for comprehensive layout changes)
+Jekyll enables the includes of the navigation bar and the posting system
+
+The generic and elements page can be used to explore already implemented styling option they can be uncommentes in the index sidebar navigation
+
+
+--
 Hyperspace by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
