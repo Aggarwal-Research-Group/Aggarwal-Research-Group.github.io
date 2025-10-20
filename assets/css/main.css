@@ -3916,6 +3916,7 @@ input, select, textarea {
 
 		}
 
+/* Button pictures for projects */
 .features .feature a {
   display: block;
   padding: 2em;
@@ -3962,7 +3963,80 @@ input, select, textarea {
   background-image: url('/images/Ariadne.png');
 }
 .features .ligo a {
-  background-image: url('/images/LIGO.png');
+  background-image: url('/images/LIGO-2.png');
+}
+
+/* Code for slideshow section */
+
+/* ===== Slideshow Styling (Responsive & Aspect-Ratio Safe) ===== */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2em auto;
+  background-color: #111; /* fallback background for mismatched image sizes */
+  overflow: hidden;
+  border-radius: 1.5em;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #111;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* ensures it never exceeds screen height */
+  object-fit: contain; /* maintain full image without cropping */
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1.5em;
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Navigation arrows */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 0.5em 0.8em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.3em;
+  user-select: none;
+  transform: translateY(-50%);
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+
+.prev { left: 0.5em; }
+.next { right: 0.5em; }
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 
